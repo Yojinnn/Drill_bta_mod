@@ -116,8 +116,7 @@ dependencies {
     implementation("org.apache.logging.log4j:log4j-api:$log4jVersion")
     implementation("org.apache.logging.log4j:log4j-1.2-api:$log4jVersion")
 
-    implementation("org.apache.commons:commons-lang3:3.12.0")
-    include("org.apache.commons:commons-lang3:3.12.0")
+
 
     modImplementation("com.github.Better-than-Adventure:legacy-lwjgl3:1.0.5")
     implementation(platform("org.lwjgl:lwjgl-bom:$lwjglVersion"))
@@ -147,6 +146,7 @@ tasks.compileJava {
 }
 
 tasks.jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from("LICENSE") {
         rename { "${it}_${base.archivesName.get()}" }
     }
@@ -162,4 +162,10 @@ tasks.processResources {
     filesMatching("fabric.mod.json") {
         expand("version" to version)
     }
+
+
+
+
 }
+
+

@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "rosesword",
+  "id": "drill",
   "version": "${version}",
 
   "name": "Rose Sword",
-  "description": "Adds the Rose Sword and Rose Armour. Requested by thatsus_guy aka Woody.",
+  "description": "Adds the Rose Sword and Rose Armour. Requested by thatsus_guy aka Woody. Uses code from Useless's mod MoonMoonMoon. ",
   "authors": [
-    "camoweed_"
+    "camoweed_" ,"Yojin"
   ],
   "contact": {
     "homepage": "",
@@ -19,29 +19,30 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-			"camoweed.rosesword.ModMain"
+			"Yojin.Drill.ModMain"
     ],
 		"beforeGameStart": [
-			"camoweed.rosesword.ModMain"
+			"Yojin.Drill.ModMain"
 		],
 		"afterGameStart": [
-			"camoweed.rosesword.ModMain"
+			"Yojin.Drill.ModMain"
 		],
     "initModels": [
-      "camoweed.rosesword.ModModels"
-    ],
-		"recipesReady": [
-			"camoweed.rosesword.ModRecipes"
-		]
+      "Yojin.Drill.ModModels"
+    ]
+
+
 	},
-  "mixins": [
-      "rosesword.mixins.json"
-  ],
+
+  
 
   "depends": {
 		"minecraft": "*",
     "fabricloader": ">=0.15.5"
   },
-  "suggests": {
-  }
+  "jars": [
+    {
+      "file": "META-INF/jars/commons-lang3-3.12.0.jar"
+    }
+  ]
 }
